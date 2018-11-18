@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <a class="navbar-brand text-dark" href="/home">
+        <h3><strong class='text-success'>Movie</strong>App <i class="fas fa-film"></i></h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-dark"><i class="far fa-caret-square-down"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-warning" id='a' href="/about">About <i class="fas fa-user"></i><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-dark" id='b' href="/search">Search for people <i class="fas fa-search"></i><span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action='/searchmovie' id='form'>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for a Movie" aria-label="Search" name="search"
+                id='text'>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id='search'>Search</button>
+        </form>
+    </div>
+</nav>

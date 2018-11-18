@@ -1,0 +1,22 @@
+{
+  "name": "movie_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "keywords": [],
+  "author": "sina keshmiri",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

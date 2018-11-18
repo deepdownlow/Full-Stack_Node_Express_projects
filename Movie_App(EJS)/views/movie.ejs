@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+<body>
+    <%- include('partials/navbar') %>
+    <div class="background animated zoomInUp" style='--background: url("http://image.tmdb.org/t/p/w780/<%= movie.poster_path%>")'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-light animated bounceInLeft delay-1s detail">
+                    <h1 class='display-1 mt-1 plot'>
+                        Plot
+                    </h1>
+                    <p>
+                        <%= movie.overview%>
+                    </p>
+                </div>
+                <div class='col-lg-6 col-md-12 text-light animated bounceInRight delay-1s detail'>
+                    <h1 class="display-1 mt-1 overview">Overview</h1>
+                    <p>Release Date:
+                        <%= movie.release_date%>
+                    </p>
+                    <p>Popularity:
+                        <%= movie.popularity%>
+                    </p>
+                    <p>Average vote:
+                        <%= movie.vote_average%>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <base href="/">
+    <script src="js/responsive.js"></script>
+
+</body>
+
+</html>

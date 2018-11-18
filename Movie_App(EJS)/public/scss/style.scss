@@ -1,0 +1,135 @@
+$time: 0.4s;
+$margin-top: 100px;
+$color: black;
+$width: 100%;
+$border: 2px solid white;
+$color-two: black;
+$border-two: 2px solid black;
+$none: none;
+$clip: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+$base: 0;
+
+body {
+  transition: $time;
+}
+.back-image {
+  background-image: url("http://thecrcl.ca/wp-content/uploads/2017/04/background-main.jpg");
+  position: fixed;
+  top: 0;
+  width: $width;
+  z-index: $base;
+  min-height: $width;
+  height: auto;
+  transition: $time;
+}
+.welcomeBox {
+  margin-top: 15%;
+  transition: $time;
+}
+.card-body {
+  border: $border;
+}
+#card {
+  height: 800px;
+  margin-bottom: 20px;
+  border: $border;
+  border-radius: 10px;
+}
+#card:hover {
+  transform: scale(1.03);
+  border: $border-two;
+  transition: 0.3s;
+  box-shadow: 0 0 10px $color;
+  text-shadow: 0 0 1px $color;
+  cursor: pointer;
+}
+#card:active {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px $color;
+}
+.header {
+  letter-spacing: 10px;
+  font-size: 10vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor: default;
+}
+.jumbotron {
+  text-shadow: 0 0 10px $color;
+}
+.jumbotron:hover {
+  background-color: $color-two !important;
+  transition: 0.5s;
+}
+img {
+  height: 50px;
+}
+a {
+  text-decoration: $none;
+}
+a:hover {
+  text-decoration: $none;
+}
+.background {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 1)
+    ),
+    var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 55px;
+  position: fixed;
+  top: 0;
+  width: $width;
+  z-index: $base - 1;
+  min-height: $width;
+  height: auto;
+  clip-path: $clip;
+}
+ul {
+  li {
+    list-style: $none;
+    font-size: 1.5vw;
+  }
+}
+// p {
+//   font-size: 1.5vw;
+// }
+
+.navbar {
+  border: $border !important;
+  border-bottom: 2px solid $color !important;
+  position: fixed;
+  width: $width;
+  top: 0;
+  z-index: 1;
+}
+nav a:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 1px $color;
+  transition: 0.2s;
+}
+nav #a:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 1px $color;
+  transition: 0.2s;
+}
+#button:hover {
+  background-color: $color-two !important;
+  color: $color !important;
+}
+.playingNow {
+  margin-top: $margin-top;
+  transition: $time;
+}
+.searchFeild {
+  margin-top: $margin-top;
+  transition: $time;
+}
+.about {
+  margin-top: $margin-top;
+  transition: $time;
+}
