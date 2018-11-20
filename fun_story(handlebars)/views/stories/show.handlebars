@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col s12 m8">
+    <h4>
+      {{story.title}}
+      <small>{{{editIcon story.user.id user.id story.id false}}}</small>
+    </h4>
+    <div class="card story z-depth-5">
+      <div class="card-content">
+        <span class="card-title">{{formatTime story.date 'MMMM Do YYYY'}}</span>
+        {{{story.desc}}}
+      </div>
+    </div>
+    {{#if story.allowComments}}
+    <div class="card z-depth-5">
+      <div class="card-content">
+        <span class='card-title'>Comments</span>
+        {{#if user}}
+        <form action="/stories/comment/{{story.id}}" method="post">
+          <div class="input-field">
+            <label for='textarea'>Add Comment</label>
+            <textarea name="commentDesc" id='textarea' class='materialize-textarea'></textarea>
+          </div>
+          <input class="btn indigo darken-4" type="submit" value="submit">
+        </form>
+        {{else}}
+        <p>You must be <a href="/auth/google">logged</a> in to leave comment</p>
+        {{/if}}
+      </div>
+    </div>
+    {{#each story.comments}}
+    <div class="card z-depth-5">
+      <div class="card-content">
+        <p>{{commentDesc}}</p>
+        <div class="chip">
+          <img src="{{commentUser.img}}">
+          <a href="/stories/user/{{commentUser.id}}">
+            {{commentUser.firstName}} {{commentUser.lastName}}
+          </a>
+          <br>
+          <small>Posted: {{formatTime commentDate 'MMMM Do YYYY'}}</small>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{/if}}
+  </div>
+  <div class="col s12 m4">
+    <div class="card center-align z-depth-5">
+      <div class="card-content">
+        <span class="card-title">
+          {{story.user.firstName}} {{story.user.lastName}}
+        </span>
+        <img src="{{story.user.img}}" class='circle responsive-img'>
+      </div>
+      <a href="/stories/user/{{story.user.id}}" class='btn-floating halfway-fab waves-effect waves-light pulse indigo darken-4 lighten-4 tooltipped waves-effect waves-teal'
+        data-position="top" data-tooltip="More Stories from {{story.user.firstName}}">
+        <i class="fas fa-info"></i>
+      </a>
+    </div>
+  </div>
+</div>

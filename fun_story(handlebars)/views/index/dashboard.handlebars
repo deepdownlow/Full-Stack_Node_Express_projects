@@ -1,0 +1,39 @@
+<div class="center">
+ <h4>Welcome {{user.firstName}}</h4>
+ <h4>Dashboard</h4>
+</div>
+{{#if stories}}
+<table class="highlight">
+ <thead>
+  <tr>
+   <th>Title</th>
+   <th>Date created</th>
+   <th>Status</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  {{#each stories}}
+  <tr>
+   <td>
+    <a href="/stories/show/{{id}}" class='black-text'>{{title}}</a>
+   </td>
+   <td>{{formatTime date 'MMMM Do YYYY'}}</td>
+   <td>{{status}}</td>
+   <td>
+    <button class='btn-floating grey darken-2 z-depth-3' type='submit'>
+     <a href="/stories/edit/{{id}}" class='left-align black-text'><i class="fas fa-pencil-alt"></i></a>
+    </button>
+    <form action="/stories/{{id}}?_method=DELETE" method='post' id='delete-form'>
+     <input type="hidden" name='_method' value='DELETE'>
+     <button class='btn-floating red z-depth-3' type='submit'><i class="far fa-trash-alt"></i></button>
+    </form>
+   </td>
+
+  </tr>
+  {{/each}}
+ </tbody>
+</table>
+{{else}}
+<p>No story found</p>
+{{/if}}

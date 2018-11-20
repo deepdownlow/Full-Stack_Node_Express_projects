@@ -1,0 +1,32 @@
+<ul id="slide-out" class="sidenav">
+  <li>
+    {{#if user}}
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <img src="https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cc6f92ef530adcffe696f5e2449ad62c&auto=format&fit=crop&w=1950&q=80">
+      </div>
+      <a href="#user"><img class="circle" src="{{user.img}}"></a>
+      <a href="#name"><span class="white-text name">{{user.firstName}} {{user.lastName}}</span></a>
+      <a href="#email"><span class="white-text email">{{user.email}}</span></a>
+    </div>
+  </li>
+  <li><a href="/stories" class='black-text'><i class="fas fa-book-open"></i> Public stories </a></li>
+  <li class='divider'></li>
+  <li><a href="/dashboard" class='black-text'><i class="fas fa-tachometer-alt"></i> Dashboard </a></li>
+  <li class='divider'></li>
+  <li><a href="/stories/my-stories" class='black-text'><i class="far fa-bookmark"></i> My stories </a></li>
+  <li class='divider'></li>
+  <li><a href="/auth/logout" class='black-text'><i class="fas fa-sign-out-alt"></i> logout </a></li>
+  <li class='divider'></li>
+  {{else}}
+  <li class='divider'></li>
+  <li><a href="/stories" class='black-text'><i class="fas fa-book black-text"></i> Public stories</a></li>
+  <li class='divider'></li>
+  <li><a href="/auth/google" class='red darken-1 btn z-depth-5'><i class="fab fa-google left"></i> Google login </a></li>
+  {{/if}}
+  </li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger">
+  <h2 class='indigo-text text-darken-4'><i class="far fa-arrow-alt-circle-right"></i></h2>
+</a>

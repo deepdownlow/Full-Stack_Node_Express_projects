@@ -1,0 +1,30 @@
+<div class="row">
+ <form action="/stories" class="col s12" method='post'>
+  <div class="input-field col s12">
+   <input name="title" type="text">
+   <label for="title">Title</label>
+  </div>
+  <div class="input-field col s12">
+   <select name="status">
+    <option value="Public" selected>Public</option>
+    <option value="Private">Private</option>
+    <option value="Unpublished">Unpublished</option>
+   </select>
+   <label>Status</label>
+  </div>
+  <div class='input-field col s12'>
+   <p>
+    <label>
+     <input id="indeterminate-checkbox" type="checkbox" name='allowComments' />
+     <span>Allow comments</span>
+    </label>
+   </p>
+  </div>
+  <div class="input-field col s12">
+   <h5>Tell us your story: </h5>
+   <textarea name="desc"></textarea>
+  </div>
+  <input type="submit" value='save' class='btn z-depth-5'>
+</div>
+</form>
+</div>
