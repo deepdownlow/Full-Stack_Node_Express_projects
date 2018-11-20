@@ -1,0 +1,39 @@
+{{#each errors}}
+<div class='alert alert-danger'>{{text}}</div>
+{{else}}
+{{/each}}
+<div class="jumbotron mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class='text-center'>Register Account</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus pariatur, hic eveniet et mollitia
+          consequuntur eos officia perferendis minima facere delectus, ea molestiae error beatae sint voluptatibus
+          voluptates doloremque sapiente.</p>
+      </div>
+      <div class="col-md-6">
+        <form action='/user/register' method='POST'>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="First name" name='firstname' value={{firstname}}>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Last name" name='lastname' value={{lastname}}>
+            </div>
+            <div class="col-md-12 mb-3">
+              <input type="email" class="form-control" placeholder="Email" name='email' value={{email}}>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="password" class="form-control" placeholder="Password" name='password'>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="password" class="form-control" placeholder="Confirm your password" name='password2'>
+            </div>
+            <button class='btn btn-primary btn-block'>Register <i class="fas fa-user-plus"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

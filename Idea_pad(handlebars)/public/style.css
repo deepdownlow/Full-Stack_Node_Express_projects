@@ -1,0 +1,15 @@
+.box {
+ height: 400px;
+ width: auto;
+ box-shadow: 0 0 10px black
+}
+.box:hover {
+ transform: scale(1.03);
+transition: 0.2s;
+cursor: pointer
+}
+.background {
+ background-image: url('https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6976644b366d25ec7770d7a6e450b22e&auto=format&fit=crop&w=934&q=80');
+ height: 1000px
+
+}

@@ -1,0 +1,36 @@
+<div class="mt-5">
+  {{#each errors}}
+  <div class="alert alert-danger" role="alert">
+    {{text}}
+  </div>
+  {{else}}
+  {{/each}}
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Add Idea</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quod, aliquid soluta nobis nostrum iste
+            aspernatur saepe unde officiis alias possimus aut quos provident minima, molestias officia rerum nesciunt
+            obcaecati.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <form action="/ideas" method="POST">
+            <div class="form-group">
+              <label for="titleInput">Title: </label>
+              <input type="text" class="form-control" id="titleInput" aria-describedby="emailHelp" placeholder="Enter title"
+                name='title'>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Detail: </label>
+              <textarea class="form-control" id="exampleInputPassword1" placeholder="Detail" name='detail'></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
